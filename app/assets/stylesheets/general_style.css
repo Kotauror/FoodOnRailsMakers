@@ -1,0 +1,42 @@
+.welcome {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #e25c5c;
+  font-size: 1.5em;
+  color: white;
+  font-family: Roboto;
+}
+
+.restaurants {
+  margin-top: 5em;
+  display: grid;
+  width: 80%;
+  margin-left: 10%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+
+.single_restaurant {
+  background-color: #fffcfc;
+  border-radius: 0.4em;
+  border-style: solid;
+  border-color: #968484;
+  border-width: 0.05em;
+}
+
+.restaurant_name {
+  text-align: center;
+  font-family: Roboto;
+}
+
+.restaurant_description {
+  padding: 5%;
+  font-family: Roboto;
+}
+
+.single_restaurant:hover {
+  background-color: #e25c5c;
+  color: white;
+}
