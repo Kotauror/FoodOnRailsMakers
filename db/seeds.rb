@@ -12,3 +12,7 @@ Restaurant.create([
   {name: "Makers Academy", description: "Toasts and nutella"},
   {name: "Byron", description: "Overhyped"}
 ])
+
+Review.create([
+  {text: "Dino Dinner was AMAZING", author: "Hannah", score: 4, restaurant_id: 1},
+])
