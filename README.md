@@ -1,5 +1,13 @@
 # Food on Rails
 
+## Getting started
+
+1. Clone this repo
+2. Run ```bundle``` to install all the gems
+3. Run ```rake db:migrate``` to generate the necessary databases. *If you are having problems with running ```rake db:migrate``` try running ```bin/rake db:migrate```*
+
+## User stories
+
 ```
 As a user,
 So I can create a new restaurant on Food on Rails,
