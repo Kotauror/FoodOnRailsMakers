@@ -1,7 +1,7 @@
 feature 'add a review' do
   scenario 'click on restaurants name takes us to restaurants page' do
     visit('/restaurants')
-    click_link('DINO-GRILL')
+    click_on('DINO-GRILL')
     expect(page).to have_content("Dino Dinner was AMAZING")
   end
 end
