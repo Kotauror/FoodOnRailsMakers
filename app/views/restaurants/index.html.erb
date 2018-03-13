@@ -1,6 +1,19 @@
-FoodOnRails - hello!!
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <%= stylesheet_link_tag "general_style" %>
+  </head>
+  <body>
+    FoodOnRails - hello!!
 
-<% for restaurant in @restaurants do %>
-  <h2> <%= restaurant.name %> </h2>
-  <p> <%= restaurant.description %> </p>
-<% end %>
+    <% for restaurant in @restaurants do %>
+    <div class="single_restaurant">
+      <div class="restaurant_name"> <h2> <%= restaurant.name %> </h2> </div>
+      <div class="restaurant_description"> <p> <%= restaurant.description %> </p> </div>
+    </div>
+    <% end %>
+
+  </body>
+</html>
