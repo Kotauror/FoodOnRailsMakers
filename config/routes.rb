@@ -6,7 +6,7 @@ end
 
 
 # Prefix Verb   URI Pattern                     Controller#Action
-# restaurants GET    /restaurants(.:format)          restaurants#index
+# restaurants GET    /restaurants(.:format)          restaurants#index    --> if you go to restaurants, a view from index file in restaurants directory will be shown. 
 #        POST   /restaurants(.:format)          restaurants#create
 # new_restaurant GET    /restaurants/new(.:format)      restaurants#new
 # edit_restaurant GET    /restaurants/:id/edit(.:format) restaurants#edit
