@@ -1,2 +1,9 @@
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.description %></p>
+
+<% if @reviews %>
+  <h3>Reviews</h3>
+  <% for review in @reviews do %>
+    <p><strong><%= review.author %></strong> : <%= review.text %> <%= review.score %>/5</p>
+  <% end %>
+<% end %>
