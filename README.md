@@ -1,24 +1,36 @@
-# README
+# Food on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+As a user,
+So I can create a new restaurant on Food on Rails,
+I want to fill in a form specifying its name and description
 
-Things you may want to cover:
+As a user,
+So that I can manage the restaurants,
+I want to be able to edit and delete the restaurants on Food on Rails
 
-* Ruby version
+As a user,
+So I can feedback and recommend restaurants,
+I want to be able to leave a review with a score out of five.
 
-* System dependencies
+As a user,
+So I can easily see highly rated restaurants,
+I want to see each restaurant's average rating.
 
-* Configuration
+As a user,
+So I can decide which restaurant I want to go to,
+I want to see each restaurant's reviews.
 
-* Database creation
 
-* Database initialization
+As a website admin,
+So that I can keep my reviews website tidy,
+I want to make sure that all reviews are submitted with a rating out of five.
 
-* How to run the test suite
+As a website admin,
+So that I can keep my reviews website tidy,
+I want to make sure that all restaurant listings are submitted with a restaurant name and a description.
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Initial diagrams  
+![](public/app-sketch.jpg)
+![](public/models-sketch.jpg)
