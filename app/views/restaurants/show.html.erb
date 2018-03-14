@@ -7,3 +7,14 @@
     <p><strong><%= review.author %></strong> : <%= review.text %> <%= review.score %>/5</p>
   <% end %>
 <% end %>
+
+<h3>Add your review</h3>
+<%= form_for([@restaurant, Review.new]) do |form| %>
+<p><%= form.label :author %></p>
+<p><%= form.text_field :author %></p>
+<p><%= form.label :text, 'Review' %></p>
+<p><%= form.text_area :text %></p>
+<p><%= form.label :score %></p>
+<p><%= form.text_area :score %></p>
+<%= form.submit 'submit' %>
+<% end  %>
