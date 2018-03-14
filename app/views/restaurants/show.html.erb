@@ -20,3 +20,6 @@
 <p><%= form.text_area :score %></p>
 <%= form.submit 'submit' %>
 <% end  %>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Delete', restaurant_path(@restaurant), :method => :delete, :confirm => "Are you sure?" %>
