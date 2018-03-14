@@ -24,7 +24,7 @@ require 'capybara/rails'
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.before(:each) do
-    system 'rake db:reset'
+    # system 'rake db:reset'
   end
 
   # rspec-expectations config goes here. You can use an alternate
