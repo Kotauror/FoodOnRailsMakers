@@ -1,8 +1,6 @@
 class ReviewsController < ApplicationController
-  def create
-    p params[:review]
+  def create # standard method - do not rename :) 
     restaurant = Restaurant.find(params[:restaurant_id])
-    p restaurant
     review = Review.new(review_params)
     restaurant.reviews << review
     restaurant.save
