@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
     review = Review.new(review_params)
     restaurant.reviews << review
     restaurant.save
-    flash[:notice] = "Thanks #{review[:author]} review has been saved"
+    flash[:notice] = "Thanks #{review[:author]}, review has been saved"
     redirect_to restaurant_path(restaurant)
   end
 
