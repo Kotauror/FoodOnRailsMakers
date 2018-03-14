@@ -30,6 +30,16 @@ class RestaurantsController < ApplicationController
     redirect_to '/'
   end
 
+  def update
+    @restaurant = Restaurant.find params[:id]
+    if @restaurant.update_attributes(restaurant_params)
+      flash[:notice] = "The restaurant was updated."
+      redirect_to @restaurant
+    else
+      render :edit
+    end
+  end
+
   private
 
   def restaurant_params
