@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  def create # standard method - do not rename :) 
+  def create # standard method - do not rename :)
     restaurant = Restaurant.find(params[:restaurant_id])
     review = Review.new(review_params)
     restaurant.reviews << review
