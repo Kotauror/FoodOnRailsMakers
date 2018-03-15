@@ -21,6 +21,16 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find params[:id]
     @reviews = @restaurant.reviews
+    @score_counter = 0
+    length = @reviews.length
+    if length == 0 || length == nil then
+      @average
+    else
+      @reviews.each do |rev|
+        @score_counter += rev.score.to_i
+      end
+      @average = @score_counter / length
+    end
   end
 
   def destroy
