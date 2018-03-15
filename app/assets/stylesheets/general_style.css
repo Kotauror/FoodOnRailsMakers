@@ -1,3 +1,8 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 .welcome {
   text-align: center;
   padding-top: 1em;
@@ -39,4 +44,21 @@
 .single_restaurant:hover {
   background-color: #e25c5c;
   color: white;
+}
+
+.footer {
+  background-color: #e25c5c;
+  padding: 0.2em;
+  color: white;
+  text-align: center;
+  font-family: Roboto;
+  width: 100%;
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 0.2em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow:hidden;
+  text-decoration: none;
 }
