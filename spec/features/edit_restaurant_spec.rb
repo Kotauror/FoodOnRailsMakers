@@ -7,7 +7,7 @@ feature 'edit a restaurant' do
     click_on('Create Restaurant')
     click_on('Edit')
     fill_in('restaurant[description]', :with => 'good chicken strips')
-    click_on('Submit')
+    click_on('Update Restaurant')
     expect(page).not_to have_content('bad chicken strips')
   end
 
