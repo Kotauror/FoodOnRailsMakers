@@ -1,29 +1,38 @@
+<%= render 'header' %>
 <%= notice %>
+<div class="restaurant_data">
+  <h2><%= @restaurant.name %></h2>
+  <p><%= @restaurant.description %></p>
+  <p>Average score:
+    <%= @average.to_f %></p>
 
-<h2><%= @restaurant.name %></h2>
-<p><%= @restaurant.description %></p>
+  <h3>Add your review</h3>
+  <%= form_for([@restaurant, Review.new]) do |form| %>
+  <p><%= form.label :author %></p>
+  <p><%= form.text_field :author %></p>
+  <p><%= form.label :text, 'Review' %></p>
+  <p><%= form.text_area :text %></p>
+  <p><%= form.label :score %></p>
+  <p><%= form.text_area :score %></p>
+  <%= form.submit 'submit' %>
+  <% end  %>
 
-<p>Average score: <%= @average.round(1) %></p>
+  <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
+  |
+  <%= link_to 'Delete', restaurant_path(@restaurant), :method => :delete, :confirm => "Are you sure?" %>
+</div>
 
-<% if @reviews %>
-  <h3>Reviews</h3>
-  <% for review in @reviews do %>
-    <p><strong><%= review.author %></strong> : <%= review.text %> <%= review.score %>/5</p>
+<div class="reviews">
+  <% if @reviews %>
+    <h2>Reviews</h2>
+    <% for review in @reviews do %>
+      <p>
+        <strong><%= review.author %></strong>
+        :
+        <%= review.text %>
+        <%= review.score %>/5</p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
-<h3>Add your review</h3>
-<%= form_for([@restaurant, Review.new]) do |form| %>
-<p><%= form.label :author %></p>
-<p><%= form.text_field :author %></p>
-<p><%= form.label :text, 'Review' %></p>
-<p><%= form.text_area :text %></p>
-<p><%= form.label :score %></p>
-<p><%= form.text_area :score %></p>
-<%= form.submit 'submit' %>
-<% end  %>
-
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Delete', restaurant_path(@restaurant), :method => :delete, :confirm => "Are you sure?" %>
-
-<!-- , :method => :edit, :confirm => "Are you sure?" -->
+<%= render 'footer' %>
