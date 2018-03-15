@@ -12,7 +12,7 @@ class RestaurantsController < ApplicationController
     else
       messages = ""
       @restaurant.errors.full_messages.each do |message|
-        messages += message 
+        messages += message
       end
       flash[:notice] = messages
       render :new
@@ -29,10 +29,10 @@ class RestaurantsController < ApplicationController
     @score_counter = 0
     length = @reviews.length
     if length == 0 || length == nil then
-      @average
+      @average = 0.0
     else
       @reviews.each do |rev|
-        @score_counter += rev.score.to_i
+        @score_counter += rev.score.to_f
       end
       @average = @score_counter / length
     end
@@ -50,7 +50,6 @@ class RestaurantsController < ApplicationController
   end
 
   def update
-    p "2"
     @restaurant = Restaurant.find params[:id]
     if @restaurant.update_attributes(restaurant_params)
       flash[:notice] = "The restaurant was updated."
