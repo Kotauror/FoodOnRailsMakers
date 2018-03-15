@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="welcome"> Food on Rails - a Rails application for Food </div>
+    <a href="/restaurants/new"><button class="new_res">Create a new Restaurant</button></a>
     <div class="restaurants">
       <% for restaurant in @restaurants do %>
       <div class="single_restaurant">
@@ -17,5 +18,6 @@
       </div>
       <% end %>
     </div>
+  <div class="footer"> <a href="https://github.com/Kotauror/FoodOnRailsMakers">Food On Rails - visit our repo!</a> </div>
   </body>
 </html>
