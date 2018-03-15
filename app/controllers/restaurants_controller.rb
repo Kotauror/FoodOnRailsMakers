@@ -10,6 +10,11 @@ class RestaurantsController < ApplicationController
       flash[:notice] = "#{@restaurant.name} saved"
       redirect_to @restaurant
     else
+      messages = ""
+      @restaurant.errors.full_messages.each do |message|
+        messages += message 
+      end
+      flash[:notice] = messages
       render :new
     end
   end
@@ -35,6 +40,7 @@ class RestaurantsController < ApplicationController
   end
 
   def update
+    p "2"
     @restaurant = Restaurant.find params[:id]
     if @restaurant.update_attributes(restaurant_params)
       flash[:notice] = "The restaurant was updated."
