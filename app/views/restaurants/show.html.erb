@@ -3,7 +3,7 @@
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.description %></p>
 
-<p>Average score: <%= @average.to_f %></p>
+<p>Average score: <%= @average.round(1) %></p>
 
 <% if @reviews %>
   <h3>Reviews</h3>
