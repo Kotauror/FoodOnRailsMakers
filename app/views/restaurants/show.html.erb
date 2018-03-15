@@ -6,16 +6,16 @@
   <p>Average score:
     <%= @average.to_f %></p>
 
-  <h3>Add your review</h3>
-  <%= form_for([@restaurant, Review.new]) do |form| %>
-  <p><%= form.label :author %></p>
-  <p><%= form.text_field :author %></p>
-  <p><%= form.label :text, 'Review' %></p>
-  <p><%= form.text_area :text %></p>
-  <p><%= form.label :score %></p>
-  <p><%= form.text_area :score %></p>
-  <%= form.submit 'submit' %>
-  <% end  %>
+<h3>Add your review</h3>
+<%= form_for([@restaurant, Review.new]) do |form| %>
+<p><%= form.label :author %></p>
+<p><%= form.text_field :author %></p>
+<p><%= form.label :text, 'Review' %></p>
+<p><%= form.text_area :text %></p>
+<p><%= form.label :score %></p>
+<p><%= form.select :score, ['Select', '1','2','3','4','5'] %></p>
+<%= form.submit 'submit' %>
+<% end  %>
 
   <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
   |
@@ -35,4 +35,6 @@
   <% end %>
 </div>
 
+
+<!-- , :method => :edit, :confirm => "Are you sure?" -->
 <%= render 'footer' %>

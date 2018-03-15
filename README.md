@@ -27,8 +27,7 @@ I want to see each restaurant's average rating.
 
 As a user,
 So I can decide which restaurant I want to go to,
-I want to see each restaurant's reviews.
-
+I want to see each restaurant's reviews
 
 As a website admin,
 So that I can keep my reviews website tidy,

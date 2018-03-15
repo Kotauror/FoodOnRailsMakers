@@ -6,11 +6,11 @@ feature 'score' do
     click_on('Create Restaurant')
     fill_in('review[author]', :with => 'Laura')
     fill_in('review[text]', :with => 'I was served the worst falafel')
-    fill_in('review[score]', :with => 1 )
+    select "1", :from => "review[score]"
     click_on('submit')
     fill_in('review[author]', :with => 'Laura')
     fill_in('review[text]', :with => 'I was served the worst falafel')
-    fill_in('review[score]', :with => 3 )
+    select "3", :from => "review[score]"
     click_on('submit')
     expect(page).to have_content('Average score: 2')
   end
