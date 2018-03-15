@@ -35,7 +35,6 @@ class RestaurantsController < ApplicationController
   end
 
   def update
-    p "2"
     @restaurant = Restaurant.find params[:id]
     if @restaurant.update_attributes(restaurant_params)
       flash[:notice] = "The restaurant was updated."
