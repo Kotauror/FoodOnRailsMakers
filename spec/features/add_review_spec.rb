@@ -10,7 +10,7 @@ feature 'add a review' do
     click_on('DINO-GRILL')
     fill_in('review[author]', :with => 'Laura')
     fill_in('review[text]', :with => 'I was served the worst falafel with the rudest service')
-    fill_in('review[score]', :with => 1)
+    select "2", :from => "scores"
     click_on('submit')
     expect(page).to have_content('I was served the worst falafel with the rudest service')
   end
@@ -20,7 +20,7 @@ feature 'add a review' do
     click_on('DINO-GRILL')
     fill_in('review[author]', :with => 'Laura')
     fill_in('review[text]', :with => 'I was served the worst falafel with the rudest service')
-    fill_in('review[score]', :with => 1)
+    select "1", :from => "scores"
     click_on('submit')
     expect(page).to have_content('Thanks Laura, review has been saved')
   end
