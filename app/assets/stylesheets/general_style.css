@@ -13,6 +13,14 @@ html {
   font-family: Roboto;
 }
 
+.new_res {
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-decoration: none;
+}
+
 .restaurants {
   margin-top: 5em;
   display: grid;
