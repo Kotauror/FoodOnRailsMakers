@@ -3,7 +3,6 @@ class ReviewsController < ApplicationController
     restaurant = Restaurant.find(params[:restaurant_id])
     review = Review.new(review_params)
     review.save
-    p review.errors.messages
     if review.errors.messages.length == 1
       restaurant.reviews << review
       flash[:notice] = "Thanks #{review[:author]}, review has been saved"
