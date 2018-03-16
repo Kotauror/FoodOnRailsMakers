@@ -20,6 +20,11 @@ html {
   color: pink;
 }
 
+.everything {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .welcome {
   margin-bottom: 2em;
   text-align: center;
@@ -82,14 +87,13 @@ html {
 }
 
 .restaurant_data {
-  float: left;
-  margin-left: 5em;
+  margin-left: 6em;
+  text-align: left;
 }
 
 .reviews {
-  float: right;
-  margin-right: 10em;
-  text-align: left;
+  margin-right: 6em;
+  text-align: right;
 }
 
 .footer {
