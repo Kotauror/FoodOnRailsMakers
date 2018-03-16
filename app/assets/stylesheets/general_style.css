@@ -130,6 +130,7 @@ html {
   margin: auto;
   position: absolute;
   left: 0;
+  bottom: 0;
   overflow:hidden;
   text-decoration: none;
 }
