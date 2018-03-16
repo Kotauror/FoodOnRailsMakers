@@ -17,10 +17,11 @@
   <p><%= form.select :score, ['Select', '1','2','3','4','5'] %></p>
   <%= form.submit 'submit' %>
   <% end  %>
+  <br><br>
 
-    <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
-    |
-    <%= link_to 'Delete', restaurant_path(@restaurant), :method => :delete, :confirm => "Are you sure?" %>
+    <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+    <%= link_to 'Delete', restaurant_path(@restaurant), :method => :delete, data: {:confirm => "Are you sure?"} %>
+
   </div>
 
   <div class="reviews">
@@ -37,5 +38,4 @@
   </div>
 </div>
 
-<!-- , :method => :edit, :confirm => "Are you sure?" -->
 <%= render 'footer' %>
