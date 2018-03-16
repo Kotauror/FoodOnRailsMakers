@@ -3,6 +3,9 @@ html {
   min-height: 100%;
   text-align: center;
   font-family: Roboto;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Carrot_%28PSF%29.jpg/462px-Carrot_%28PSF%29.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .partial_link {
