@@ -37,6 +37,9 @@ html {
   font-family: Roboto;
 }
 
+.notice {
+  background-color: yellow;
+
 .new_rest_link:link {
   text-decoration: none;
 }
