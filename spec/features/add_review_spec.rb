@@ -25,4 +25,13 @@ feature 'add a review' do
     expect(page).to have_content('Thanks Laura, review has been saved')
   end
 
+  scenario 'submitting a review without a valid score will fail validation' do
+    visit('/restaurants')
+    click_on('DINO-GRILL')
+    fill_in('review[author]', :with => 'Hannah')
+    fill_in('review[text]', :with => 'Amazing')
+    click_on('submit')
+    expect(page).to have_content('You must submit a score')
+  end
+
 end
