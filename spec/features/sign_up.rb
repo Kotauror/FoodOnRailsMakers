@@ -1,7 +1,8 @@
 feature 'Sign up' do
   scenario 'Successful sign up' do
     visit('/')
-    click_on('Sign up')
+    click_button('Register')
+    p page.html
     fill_in('user[email]', :with => 'myamazingworld@hello.com')
     fill_in('user[password]', :with => 'password')
     click_on('Sign up')
