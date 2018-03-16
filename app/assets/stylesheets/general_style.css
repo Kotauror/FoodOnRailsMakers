@@ -37,6 +37,10 @@ html {
   font-family: Roboto;
 }
 
+.notice {
+  background-color: yellow;
+}
+
 .new_res {
   margin-top: 2em;
   margin-bottom: 3em;
