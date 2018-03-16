@@ -37,15 +37,27 @@ html {
   font-family: Roboto;
 }
 
+.new_rest_link:link {
+  text-decoration: none;
+}
+
 .new_res {
   margin-top: 2em;
   margin-bottom: 3em;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  text-decoration: none;
-  height: 2em;
   border-radius: 0.4em;
+  height: fit-content;
+  width: fit-content;
+  padding: 1em;
+  font-weight: bolder;
+  font-size: 1em;
+}
+
+.new_res:hover {
+  background-color: #e25c5c;
+  color: white;
 }
 
 .restaurants {
