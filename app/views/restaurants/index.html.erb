@@ -6,7 +6,21 @@
   <div class="single_restaurant">
     <div class="restaurant_name"> <h2><%= link_to restaurant.name, restaurant_path(restaurant), :class => "restaurant_name_link"  %></h2> </div>
     <div class="restaurant_description"> <p> <%= restaurant.description %> </p> </div>
-    <div class="restaurant_description"> <p> Rating: <%= restaurant.reviews.average(:score).to_f.round(1) %> </p> </div>
+  <!--  <div class="restaurant_rating"> <p> Rating: <%= @average = restaurant.reviews.average(:score).to_f.round(1) %> </p> </div> -->
+    <div class="stars"> <p> <% if @average < 1 %>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/0_stars.svg/535px-0_stars.svg.png" width="100px">
+      <% elsif @average < 2 %>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/1_stars.svg/535px-1_stars.svg.png" width="100px">
+      <% elsif @average < 3 %>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/2_stars.svg/535px-2_stars.svg.png" width="100px">
+      <% elsif @average < 4 %>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/3_stars.svg/535px-3_stars.svg.png" width="100px">
+      <% elsif @average < 4.5 %>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/4_stars.svg/535px-4_stars.svg.png" width="100px">
+      <% elsif @average > 4.5 %>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/5_stars.svg/535px-5_stars.svg.png" width="100px">
+    <% end %>
+    </div>
   </div>
   <% end %>
 </div>

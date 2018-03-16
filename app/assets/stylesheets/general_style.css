@@ -82,6 +82,10 @@ html {
   font-family: Roboto;
 }
 
+.restaurant_rating {
+  margin-top: 0em;
+}
+
 .single_restaurant:hover {
   background-color: #e25c5c;
   color: white;
