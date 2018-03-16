@@ -1,4 +1,9 @@
 feature 'Sign up' do
+
+  before(:each) do
+    User.delete_all
+  end
+
   scenario 'Successful sign up' do
     visit('/')
     click_on('Register')
