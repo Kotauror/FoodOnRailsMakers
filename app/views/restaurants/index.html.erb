@@ -6,7 +6,7 @@
   <div class="single_restaurant">
     <div class="restaurant_name"> <h2><%= link_to restaurant.name, restaurant_path(restaurant), :class => "restaurant_name_link"  %></h2> </div>
     <div class="restaurant_description"> <p> <%= restaurant.description %> </p> </div>
-    <div class="restaurant_description"> <p> <%= restaurant.reviews.average(:score).to_f.round(1) %> </p> </div>
+    <div class="restaurant_description"> <p> Rating: <%= restaurant.reviews.average(:score).to_f.round(1) %> </p> </div>
   </div>
   <% end %>
 </div>
