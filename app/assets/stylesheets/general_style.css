@@ -72,6 +72,7 @@ html {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 1em;
   grid-row-gap: 1em;
+  margin-bottom: 1em;
 }
 
 .single_restaurant {
@@ -127,10 +128,8 @@ html {
   width: 100%;
   display: inline-block;
   margin: auto;
-  margin-bottom: 0.2em;
   position: absolute;
   left: 0;
-  bottom: 0;
   overflow:hidden;
   text-decoration: none;
 }
